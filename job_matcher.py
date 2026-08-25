@@ -1,4 +1,5 @@
-import streamlit as st
+                    
+                    import streamlit as st
 import PyPDF2
 import requests
 import google.generativeai as genai
@@ -50,7 +51,8 @@ def fetch_live_jobs_adzuna(keywords, location, min_salary, app_id, app_key):
 def calculate_match_score(resume_text, job_description, api_key):
     """Sends the resume and job description to Gemini to calculate a fit score."""
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-1.5-flash', generation_config={"response_mime_type": "application/json"})
+    # Updated to the current active model
+    model = genai.GenerativeModel('gemini-2.5-flash', generation_config={"response_mime_type": "application/json"})
     
     prompt = f"""
     You are an expert technical recruiter. I will provide a candidate's RESUME TEXT and a JOB DESCRIPTION.
