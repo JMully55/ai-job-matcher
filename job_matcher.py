@@ -1,5 +1,4 @@
-                    
-                    import streamlit as st
+import streamlit as st
 import PyPDF2
 import requests
 import google.generativeai as genai
