@@ -51,7 +51,7 @@ def calculate_match_score(resume_text, job_description, api_key):
     """Sends the resume and job description to Gemini to calculate a fit score."""
     genai.configure(api_key=api_key)
     # Updated to the current active model
-    model = genai.GenerativeModel('gemini-2.5-flash', generation_config={"response_mime_type": "application/json"})
+    model = genai.GenerativeModel('gemini-3.6-flash', generation_config={"response_mime_type": "application/json"})
     
     prompt = f"""
     You are an expert technical recruiter. I will provide a candidate's RESUME TEXT and a JOB DESCRIPTION.
